@@ -1,0 +1,242 @@
+#intro-body {
+    margin: 0 auto;
+    height: 100svh;
+    background-image: linear-gradient(90deg, var(--primary-light-purple) 0% 50%, var(--primary-dark-purple) 50% 100%);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Center - Circle */
+#intro-center {
+    min-width: 370px;
+    
+    display: grid;
+    grid-template-columns: 50px 30vw 50px;
+    place-items: center;
+    column-gap: 10px;
+
+    position: absolute;
+    z-index: 2;
+}
+
+#intro-circle {
+    width: 30vw;
+    height: 30vw;
+    max-width: 550px;
+    max-height: 550px;
+    min-width: 250px;
+    min-height: 250px;
+    border-radius: 50%;
+    background-image: linear-gradient(90deg, var(--primary-dark-purple) 0% 50%, var(--primary-light-purple) 50% 100%);
+
+    display: flex;
+    justify-content: center;
+}
+
+#intro-logo {
+    padding-right: 3px;
+    padding-bottom: 30px;
+    width: 25vw;
+    max-width: 458.75px;
+    min-width: 208px;
+}
+
+/* Center - Labels */
+.intro-label {
+    height: 50px;
+    width: 30vw;
+    max-width: 550px;
+    min-width: 270px;
+    color: var(--secondary-white);
+    padding: 0 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.intro-label:first-of-type {
+    transform: rotate(270deg);
+}
+
+.intro-label:last-of-type {
+    transform: rotate(90deg);
+}
+
+.intro-label-text {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    margin: 0 10px;
+}
+
+.label-arrow {
+    background-color: var(--secondary-teal);
+    width: 7.5px;
+    height: 7.5px;
+    border-radius: 5px;
+    font-size: 2rem;
+}
+
+.intro-label-programmer {
+    background-color: var(--primary-dark-purple);
+    outline: 5px solid var(--primary-light-purple);
+}
+
+.intro-label-designer {
+    background-color: var(--primary-light-purple);
+    outline: 5px solid var(--primary-dark-purple);
+}
+
+/* Art */
+#intro-programmer-art-sm,
+#intro-designer-art-sm {
+    display: none;
+}
+
+#intro-programmer-art,
+#intro-designer-art {
+    height: 90%;
+
+    position: relative;
+    z-index: 1;
+}
+
+#intro-programmer-art {
+    right: 135px;
+}
+
+#intro-designer-art {
+    left: 135px;
+}
+
+/* Names & Lines - Lines */
+.intro-name-lines {
+    position: absolute;
+}
+
+.intro-name-lines-left {
+    top: 0;
+    right: calc(50% - 1px);
+}
+
+.intro-name-lines-right {
+    bottom: 0;
+    left: calc(50% - 1px);
+}
+
+.intro-lines {
+    display: flex;
+    flex-direction: column;
+    row-gap: 7.5px;
+}
+
+.intro-lines-left {
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    max-width: 384px;
+}
+
+.intro-lines-right {
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+    max-width: 290px;
+}
+
+.intro-lines-left > .intro-line {
+    background-color: var(--primary-dark-purple);
+}
+
+.intro-lines-right > .intro-line {
+    background-color: var(--primary-light-purple);
+}
+
+.intro-line {
+    height: 7.5px;
+}
+
+/* Names & Lines - Names */
+.intro-first-name,
+.intro-last-name {
+    font-size: 3.75rem;
+    letter-spacing: 2.5px;
+    font-weight: bold;
+}
+
+.intro-first-name,
+.intro-last-name {
+    color: var(--secondary-white);
+}
+
+@media screen and (max-width: 1915px) {
+    #intro-programmer-art,
+    #intro-designer-art {
+        display: none;
+    }
+    
+    #intro-designer-art-sm,
+    #intro-programmer-art-sm {
+        display: inline;
+        width: 29%;
+        min-width: 150px;
+        
+        position: absolute;
+        z-index: 1;
+    }
+
+    #intro-designer-art-sm {
+        top: 5%;
+        right: 3%;
+    }
+
+    #intro-programmer-art-sm {
+        bottom: 5%;
+        left: 3%;
+    }
+}
+
+@media screen and (min-width: 1835px) {
+    #intro-center {
+        grid-template-columns: 50px 550px 50px;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .intro-menu-overlay {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .intro-first-name,
+    .intro-last-name {
+        font-size: 6.25vw;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    #intro-center {
+        grid-template-columns: 50px 250px 50px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .intro-menu-option {
+        width: 200px;
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .intro-lines,
+    .label-arrow,
+    .filler,
+    #intro-designer-art-sm,
+    #intro-programmer-art-sm {
+        display: none;
+    }
+
+    .intro-label {
+        width: fit-content;
+        min-width: 215px;
+    }
+}

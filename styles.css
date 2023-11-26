@@ -1,0 +1,44 @@
+:root {
+    --primary-light-purple: rgb(50, 13, 87);
+    --primary-light-purple-darker: rgb(40, 3, 77);
+    --primary-dark-purple: rgb(26, 0, 52);
+    --primary-dark-purple-darker: rgb(36, 5, 67);
+    --secondary-teal: rgb(0, 255, 209);
+    --secondary-teal-trans: rgba(0, 255, 209, 0.5);
+    --secondary-magenta: rgb(235, 0, 255);
+    --secondary-magenta-trans: rgba(235, 0, 255, 0.5);
+    --secondary-white: rgb(255, 255, 255);
+    --menu-overlay: rgba(11, 0, 29, 0.90);
+    --experience-info: rgba(6, 0, 29, 0.35);
+    --projects-background: rgb(11, 0, 29);
+    --projects-button-background: rgba(11, 0, 29, 0.90);
+    --projects-desc: rgba(11, 0, 29, 0.75);
+    --projects-desc-info: rgba(11, 0, 29, 0.35);
+    --projects-background-active: rgb(1, 0, 19);
+    --projects-status-incomplete: rgb(0, 150, 255);
+    --projects-status-incomplete-bg: rgba(0, 150, 255, 0.25);
+    --projects-status-complete: rgb(0, 255, 150);
+    --projects-status-complete-bg: rgba(0, 255, 150, 0.25);
+    --projects-icon-background: rgba(255, 255, 255, 0.125);
+    --contact-input-background: rgba(80, 43, 117, 0.35);
+    --contact-input-background-active: rgba(80, 43, 117, 0.50);
+    --contact-input-labels: rgb(150, 113, 187);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-weight: normal;
+    font-size: 62.5%;
+    min-width: 375px;
+    background-color: var(--secondary-teal);
+}

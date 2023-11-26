@@ -1,0 +1,131 @@
+#contact-body {
+    background-color: var(--projects-background);
+
+    display: grid;
+    grid-template-rows: 200px fit-content(100%);
+}
+
+.contact-title {
+    color: var(--secondary-white);
+    font-size: 3.85rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+#contact-form-options {
+    width: 87.5vw;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form-option {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 100px 1fr;
+    column-gap: 15px;
+}
+
+.contact-form-option > label {
+    color: var(--contact-input-labels);
+    text-align: right;
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+.contact-form-option > input {
+    height: 35px;
+}
+
+.contact-form-option > textarea {
+    padding-top: 10px;
+    height: 70px;
+    resize: none;
+}
+
+.contact-form-option > input,
+.contact-form-option > textarea {
+    font-family: 'Nunito', sans-serif;
+    color: var(--secondary-white);
+    padding-left: 10px;
+    background-color: var(--contact-input-background);
+    font-size: 1rem;
+    border: none;
+}
+
+.contact-form-option > input:focus,
+.contact-form-option > textarea:focus {
+    outline: none;
+}
+
+.contact-form-option > input::placeholder {
+    color: var(--contact-input-labels);
+    opacity: 50%;
+}
+
+.contact-form-submit {
+    width: 87.5vw;
+    height: 50px;
+    background-color: unset;
+    font-size: 1.15rem;
+    letter-spacing: 1px;
+    color: var(--secondary-teal);
+    border: 3px solid var(--secondary-teal);
+    cursor: pointer;
+
+    transition-duration: 2s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@media screen and (min-width: 950px) {
+    .contact-form-option > input:hover,
+    .contact-form-option > textarea:hover {
+        background-color: var(--contact-input-background-active);
+    }
+    
+    .contact-form-submit:hover {
+        color: var(--secondary-magenta);
+        border: 3px solid var(--secondary-magenta);
+    }
+}
+
+@media screen and (max-width: 950px) {   
+    .contact-title {
+        padding: 50px 0;
+        font-size: 6.5vw;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #contact-body {
+        grid-template-rows: 100px 1fr;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #contact-form-options {
+        gap: 0px;
+    }
+    
+    .contact-form-option {
+        grid-template-columns: unset;
+        grid-template-rows: 35px 1fr;
+    }
+
+    .contact-form-option > label {
+        text-align: left;
+    }
+}

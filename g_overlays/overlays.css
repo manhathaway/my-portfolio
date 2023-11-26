@@ -1,0 +1,471 @@
+/* Multi-Selectors */
+    #overlay-menu,
+    #overlay-musix,
+    #overlay-resume,
+    #overlay-about {
+        padding: 50px;
+        height: 85svh;
+        width: 85%;
+        background-color: var(--menu-overlay);
+        border-bottom: 5px solid var(--secondary-teal);
+
+        transition-duration: 2s;
+        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+        display: none;
+        justify-content: center;
+
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #overlay-musix,
+    #overlay-resume {
+        max-width: 1500px;
+        gap: 25px;
+        grid-template-rows: 50px 1fr;
+
+        z-index: 4;
+    }
+
+    #overlay-menu,
+    #overlay-about {
+        max-width: 1000px;
+        max-height: 1000px;
+    }
+
+    #overlay-menu > button,
+    #overlay-musix > button,
+    #overlay-resume > button,
+    #overlay-about > button {
+        background-color: unset;
+        border: 3px solid var(--secondary-teal);
+        cursor: pointer;
+
+        background-image: url(./resources/cross.svg);
+        background-size: 15px;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        transition-duration: 2s;
+        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+        grid-area: exit;
+    }
+
+    #overlay-musix > div,
+    #overlay-resume > div {
+        overflow-y: auto;
+
+        grid-area: content;
+    }
+
+    #overlay-musix > div > img,
+    #overlay-resume > div > img {
+        width: 100%;
+    }
+
+    .overlay-musix-download-bg,
+    .overlay-musix-presentation-bg,
+    .overlay-resume-download-bg {
+        text-decoration: unset;
+        color: var(--secondary-white);
+        border-bottom: 3px solid var(--secondary-teal);
+        border-right: 3px solid var(--secondary-teal);
+        font-size: 1.25rem;
+        letter-spacing: 0.5px;
+
+        transition-duration: 2s;
+        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .overlay-musix-presentation-sm,
+    .overlay-musix-download-sm,
+    .overlay-resume-download-sm {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        display: none;
+    }
+
+    .overlay-musix-download-sm,
+    .overlay-musix-download-bg,
+    .overlay-resume-download-bg,
+    .overlay-resume-download-sm  {
+        grid-area: down;
+    }
+
+    .overlay-musix-download-sm,
+    .overlay-resume-download-sm {
+        background-image: url(./resources/download.svg);
+    }
+
+/* Menu Overlay */
+    #overlay-menu-icon {
+        background-image: url(./resources/menu_icon_inactive.svg);
+        width: 40px;
+        height: 40px;
+        border: none;
+        background-color: unset;
+        cursor: pointer;
+
+        transition-duration: 2s;
+        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        position: fixed;
+        top: 25px;
+        right: 25px;
+        z-index: 4;
+    }
+
+    #overlay-menu {
+        max-width: 1000px;
+        max-height: 1000px;
+
+        place-items: center;
+        gap: 25px;
+        grid-template-columns: 50px 0.25fr 1fr 0.25fr 50px;
+        grid-template-rows: 50px 1fr;
+        grid-template-areas:
+            " .     .           .           .           exit "
+            " .     options     options     options     .    ";
+        
+        z-index: 5
+    }
+
+    #overlay-menu > button {
+        width: 100%;
+        height: 100%;
+    }
+
+    .overlay-menu-options {
+        width: 100%;
+        max-width: 500px;
+        
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    
+        grid-area: options;
+    }
+
+    .overlay-menu-option {
+        background-color: unset;
+        border: unset;
+        text-decoration: unset;
+        text-align: center;
+        border-bottom: 5px solid var(--secondary-teal);
+        border-right: 5px solid var(--secondary-teal);
+        color: var(--secondary-white);
+        padding: 15px 0;
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        cursor: pointer;
+    
+        transition-duration: 2s;
+        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+/* Musix Overlay */
+    #overlay-musix {
+    grid-template-columns: 200px 200px 1fr 50px;
+    grid-template-areas:
+    " pres      down       .         exit    "
+    " content   content    content   content ";
+    }
+    
+    .overlay-musix-presentation-sm,
+    .overlay-musix-presentation-bg {
+        grid-area: pres;
+    }
+
+    .overlay-musix-presentation-sm {
+        background-image: url(./resources/open.svg);
+    }
+
+/* Resume Overlay */
+    #overlay-resume {
+        grid-template-columns: 175px 1fr 50px;
+        grid-template-areas:
+        " down       .          exit    "
+        " content    content    content ";
+    }
+
+/* About Overlay */
+    #overlay-about {
+        padding: unset;
+        grid-template-columns: 50px 1fr 50px 50px;
+        grid-template-rows: 50px 50px 1fr 50px;
+        grid-template-areas:
+        " .          .          .          .       "
+        " .          .          exit       .       "
+        " content    content    content    content "
+        " .          .          .          .       ";
+
+        z-index: 4;
+    }
+
+    #overlay-about > div {
+        width: 100%;
+        overflow: auto;
+        margin-top: 25px;
+        
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        grid-template-rows: fit-content(100%) 1fr;
+        gap: 25px;
+
+        grid-area: content;
+    }
+
+    .overlay-about-background {
+        background-color: var(--contact-input-background);
+        width: 100%;
+        height: calc(100% - 50px);
+
+        display: grid;
+        grid-template-columns: 0.5fr 1fr 0.5fr;
+        align-items: center;
+        justify-content: space-between;
+        justify-items: center;
+
+        position: relative;
+        top: 5px;
+    }
+
+    .overlay-about-portrait {
+        width: 500px;
+        height: 500px;
+
+        position: relative;
+        bottom: 30px;
+    }
+
+    .overlay-about-lines {
+        width: calc(100% + 50px);
+        max-width: 400px;
+        height: 60%;
+
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+
+        position: relative;
+        bottom: 25px;
+    }
+
+    .overlay-about-lines-left {
+        clip-path: polygon(0 0, 100% 100%, 0 100%);
+
+        position: relative;
+        left: 25px;
+        top: 50px;
+    }
+    
+    .overlay-about-lines-right {
+        clip-path: polygon(0 0, 100% 0, 100% 100%);
+
+        position: relative;
+        right: 25px;
+        bottom: 92.5px;
+    }
+    
+    .overlay-about-line {
+        background-color: var(--menu-overlay);
+        width: 100%;
+        height: 6px;
+    }
+
+    .overlay-about-paragraph {
+        width: 85%;
+        height: 100%;
+        color: var(--secondary-white);
+        font-size: 1.25rem;
+        text-align: justify;
+
+        display: flex;
+        align-items: center;
+    }
+
+/* Media Queries - Menu Overlay */
+    @media screen and (max-height: 650px), (max-width: 565px) {
+        #overlay-menu {
+            gap: 25px;
+            grid-template-areas:
+                " .           .           .           .           exit    "
+                " options     options     options     options     options ";
+        }
+    }
+
+    @media screen and (max-height: 600px) {
+        .overlay-menu-options {
+            display: grid;
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        
+            grid-area: options;
+        }
+    }
+
+    @media screen and (max-width: 700px), (max-height: 450px) {
+        #overlay-menu {
+            padding: 25px;
+            gap: 25px;
+        }
+    }
+
+    @media screen and (max-height: 325px) {
+        .overlay-menu-option {
+            padding: 2vh 0;
+        }
+    }
+
+    @media screen and (max-height: 600px)  {
+        .overlay-menu-hide-text-resume {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 615px) and (max-height: 600px) {
+        .overlay-menu-hide-text-introduction {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 500px) and (max-height: 600px) {
+        .overlay-menu-hide-text-experience {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 440px) and (max-height: 600px) {
+        .overlay-menu-hide-text-projects {
+            display: none;
+        }
+    }
+
+/* Media Queries - Musix Overlay */
+    @media screen and (max-width: 700px) {
+        #overlay-musix {
+            grid-template-columns: 50px 50px 1fr 50px;
+            padding: 25px;
+            gap: 25px 10px;
+        }
+
+        .overlay-musix-download-bg,
+        .overlay-musix-presentation-bg {
+            display: none
+        }
+
+        .overlay-musix-download-sm,
+        .overlay-musix-presentation-sm {
+            display: unset
+        }
+    }
+
+/* Media Queries - Resume Overlay */
+    @media screen and (max-width: 700px) {
+        #overlay-resume {
+            grid-template-columns: 50px 1fr 50px;
+            padding: 25px;
+        }
+
+        .overlay-resume-download-bg {
+            display: none
+        }
+
+        .overlay-resume-download-sm {
+            display: unset;
+        }
+    }
+
+/* Media Queries - About Overlay */
+    @media screen and (max-width: 850px) {
+        .overlay-about-background {
+            grid-template-columns: 1fr;
+        }
+        
+        .overlay-about-lines {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 750px) {
+        .overlay-about-portrait {
+            width: 66vw;
+            height: 66vw;
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        #overlay-about {
+            grid-template-columns: 25px 1fr 50px 25px;
+            grid-template-rows: 25px 50px 1fr 25px;
+        }
+        
+        .overlay-about-background {
+            width: 100%;
+            background-color: unset;
+        }
+    }
+
+/* Hover Animations */
+@media screen and (min-width: 950px) {
+    /* Window */
+    #overlay-menu:hover,
+    #overlay-musix:hover,
+    #overlay-resume:hover,
+    #overlay-about:hover {
+        border-bottom: 5px solid var(--secondary-magenta);
+    }
+
+    /* Option Button */
+    #overlay-musix > a:hover,
+    #overlay-resume > a:hover {
+    border-bottom: 3px solid var(--secondary-magenta);
+    border-right: 3px solid var(--secondary-magenta);
+    }
+
+    /* Exit Button */
+    #overlay-menu > button:hover,
+    #overlay-musix > button:hover,
+    #overlay-resume > button:hover,
+    #overlay-about > button:hover {
+        background-image: url(./resources/cross_active.svg);
+        border: 3px solid var(--secondary-magenta);
+    }
+
+    /* Menu - Icon */
+    #overlay-menu-icon:hover {
+        background-image: url(./resources/menu_icon_active.svg);
+    }
+
+    /* Menu - Options */
+    .overlay-menu-option:hover {
+        border-bottom: 5px solid var(--secondary-magenta);
+        border-right: 5px solid var(--secondary-magenta);
+    }
+}
+
+/*
+
+~ DEPRECIATED ~
+@media screen and (max-aspect-ratio: 9/14) {
+    #overlay-resume {
+        height: fit-content;
+    }
+}
+
+*/

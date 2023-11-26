@@ -1,0 +1,67 @@
+#footer-body {
+    width: 100%;
+    background-color: var(--projects-background);
+}
+
+#footer-body > div {
+    background-color: var(--projects-background);
+    padding: 100px 0;
+    width: 87.5vw;
+    margin: 0 auto;
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.footer-cell > button {
+    display: block;
+    text-align: center;
+    text-decoration: unset;
+    padding: 25px;
+    width: 100%;
+    border: unset;
+    border-bottom: 3px solid var(--secondary-teal);
+    border-right: 3px solid var(--secondary-teal);
+    background-color: var(--projects-background);
+    color: var(--secondary-white);
+    cursor: pointer;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+@media screen and (min-width: 950px) {
+    .footer-cell > button {
+        transition-duration: 2s;
+        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    
+    .footer-cell > button:hover {
+        border-bottom: 3px solid var(--secondary-magenta);
+        border-right: 3px solid var(--secondary-magenta);
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .footer-cell > button {
+        font-size: 1rem;
+    }
+
+    #footer-body > div {
+        padding: 75px 0;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #footer-body > div {
+        padding: 50px 0;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .footer-cell > button {
+        font-size: 0.9rem;
+    }
+}
