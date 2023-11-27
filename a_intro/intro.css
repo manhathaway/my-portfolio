@@ -232,15 +232,8 @@
 
 @media screen and (max-height: 450px) {
     .intro-lines,
-    .label-arrow,
-    .filler,
     #intro-designer-art-sm,
     #intro-programmer-art-sm {
         display: none;
-    }
-
-    .intro-label {
-        width: fit-content;
-        min-width: 215px;
     }
 }
