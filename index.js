@@ -3,8 +3,6 @@ setTimeout(function() {
     $("#loading-screen").fadeOut(500);
 }, 1000);
 
-
-
 // Toggle Menu 
 $("#overlay-menu").hide();
 toggleFade("#overlay-menu-icon", "#overlay-menu");
@@ -12,8 +10,10 @@ fadeOut("#overlay-menu button", "#overlay-menu");
 
 // Toggle Sliders
 $(".projects-desc").hide();
-toggleSlide(".projects-sffpc");
-toggleSlide(".projects-musix");
+$(".projects-desc-content").hide();
+projectsAnimation(".projects-sffpc");
+projectsAnimation(".projects-musix");
+
 
 // Toggle Musix
 $("#overlay-musix").hide();
@@ -45,8 +45,24 @@ function fadeOut(button, overlay) {
     });
 }
 
-function toggleSlide(project) {
+function projectsAnimation(project) {
+    let clickCounter = false;
+
     $(project + " .projects-button").click(function() {
-        $(project + " .projects-desc").slideToggle();
+        clickCounter = !clickCounter;
+        
+        if (clickCounter) {
+            $(project + " .projects-button").text("▼")
+            $(project + " .projects-desc").slideToggle();
+            setTimeout(function(){
+                $(project + " .projects-desc .projects-desc-content").fadeToggle();
+            }, 500);
+        } else {
+            $(project + " .projects-desc .projects-desc-content").fadeToggle();
+            setTimeout(function(){
+                $(project + " .projects-desc").slideToggle();
+                $(project + " .projects-button").text("▲")
+            }, 500);
+        }
     });
 }
