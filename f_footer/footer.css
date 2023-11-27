@@ -1,13 +1,12 @@
-#footer-body {
-    width: 100%;
+#footer-bg {
     background-color: var(--projects-background);
+    padding: 0 50px;
 }
 
-#footer-body > div {
-    background-color: var(--projects-background);
+#footer-body {
     padding: 100px 0;
-    width: 87.5vw;
     margin: 0 auto;
+    max-width: 2065px;
 
     display: grid;
     justify-content: center;
@@ -48,17 +47,14 @@
     .footer-cell > button {
         font-size: 1rem;
     }
-
-    #footer-body > div {
-        padding: 75px 0;
-    }
 }
 
 @media screen and (max-width: 700px) {
-    #footer-body > div {
+    #footer-body {
         padding: 50px 0;
     }
 }
+
 
 @media screen and (max-width: 475px) {
     .footer-cell > button {
