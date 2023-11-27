@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./icon.png"/>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Nunito'>
+    
     <link rel="stylesheet" href="styles.css"/>
     <link rel="stylesheet" href="a_intro/intro.css"/>
     <link rel="stylesheet" href="b_experience/experience.css"/>
@@ -12,13 +14,18 @@
     <link rel="stylesheet" href="e_contact/contact.css"/>
     <link rel="stylesheet" href="f_footer/footer.css"/>
     <link rel="stylesheet" href="g_overlays/overlays.css"/>
-    <title>Document</title>
+    
+    <title>A. Mannoia - Portfolio</title>
 </head>
 <body>
+    <div id="loading-screen" style="display: flex; justify-content: center; align-items: center; position: fixed; z-index: 10; width: 100svw; height: 100svh; background-color: rgb(11, 0, 29);">
+        <iconify-icon icon="line-md:loading-loop" style="font-size: 15vw; color: rgb(235, 0, 255)"></iconify-icon>
+    </div>
+
     <!-- Intro (START) -->
-        <!-- Menu Overlay (START) -->
-        <button id="overlay-menu-icon" type="button"></button>
+    <button id="overlay-menu-icon" type="button"></button>
         
+        <!-- Menu Overlay (START) -->
         <div id="overlay-menu">
             <button type="button"></button>
             <div class="overlay-menu-options">
@@ -277,7 +284,8 @@
         <div id="projects-grid">
             <div class="projects-thumbnail projects-sffpc">
                 <button type="button" class="projects-button">*</button>
-                <!--*-->
+                
+                <!-- SFFPC Slider (Start) -->
                 <div class="projects-desc">
                     <div class="projects-desc-content">
                         <div class="projects-desc-banner"> 
@@ -318,10 +326,13 @@
                         <a class="projects-desc-link" href="https://manhathaway.github.io/SFFPC_BLDR/index.html" target="_blank" rel="noopener noreferrer">View Website</a>
                     </div>
                 </div>
+                <!-- SFFPC Slider (END) -->
+
             </div>
             <div class="projects-thumbnail projects-musix">
                 <button type="button" class="projects-button">*</button>
-                <!--*-->
+                
+                <!-- MUSIX Slider (START) -->
                 <div class="projects-desc">
                     <div class="projects-desc-content">
                         <div class="projects-desc-banner"> 
@@ -359,23 +370,25 @@
                                 </div>
                             </div>   
                         </div>
-                        <button type="button" class="projects-desc-link">View Case Study</button>
+                        <button type="button" class="projects-desc-link musix-desc-link">View Case Study</button>
                             
                             <!-- Musix Overlay (START) -->
                             <div id="overlay-musix">
                                 <a class="overlay-musix-presentation-bg" href="https://www.figma.com/proto/zJvV2QfGPW76O2cdPrD0pb/Website-%26-Case-Studies?node-id=380-9916&starting-point-node-id=380%3A9916&scaling=scale-down" target="_blank" rel="noopener noreferrer">PRESENTATION</a>
                                 <a class="overlay-musix-presentation-sm" href="https://www.figma.com/proto/zJvV2QfGPW76O2cdPrD0pb/Website-%26-Case-Studies?node-id=380-9916&starting-point-node-id=380%3A9916&scaling=scale-down" target="_blank" rel="noopener noreferrer"></a>
-                                <a class="overlay-musix-download-bg" href="d_projects/resources/musix_thumbnail.png" download="alex_mannoia_musix_case_study.png">DOWNLOAD</a>
-                                <a class="overlay-musix-download-sm" href="d_projects/resources/musix_thumbnail.png" download="alex_mannoia_musix_case_study.png"></a>
+                                <a class="overlay-musix-download-bg" href="g_overlays/resources/musix_cs.png" download="alex_mannoia_musix_case_study.png">DOWNLOAD</a>
+                                <a class="overlay-musix-download-sm" href="g_overlays/resources/musix_cs.png" download="alex_mannoia_musix_case_study.png"></a>
                                 <button></button>
                                 <div>
-                                    <img src="d_projects/resources/musix_thumbnail.png" alt="Musix Case Study"></img>
+                                    <img id="musix-cs" src="g_overlays/resources/musix_cs.png" alt="Musix Case Study"></img>
                                 </div>
                             </div>
                             <!-- Musix Overlay (END) -->
 
                     </div>
                 </div>
+                <!-- MUSIX Slider (END) -->
+
             </div>
         </div>
     </div>
@@ -412,26 +425,26 @@
     <div id="footer-body">
         <div>
             <div class="footer-cell">
-                <button onClick="">MY RESUME</button>
+                <button class="footer-cell-resume-button">MY RESUME</button>
                 
                 <!-- Resume Overlay (START) -->
                 <div id="overlay-resume">
                     <a class="overlay-resume-download-bg" href="g_overlays/resources/resume.pdf" download="alex_mannoia_resume.pdf">DOWNLOAD</a>
                     <a class="overlay-resume-download-sm" href="g_overlays/resources/resume.pdf" download="alex_mannoia_resume.pdf"></a>
-                    <button onClick=""></button>
+                    <button class="overlay-resume-button"></button>
                     <div>
-                        <img src="g_overlays/resources/resume.pdf" alt="Resume"></img>
+                        <img src="g_overlays/resources/resume.png" alt="Resume"></img>
                     </div>
                 </div>
                 <!-- Resume Overlay (END) -->
             
             </div>
             <div class="footer-cell">
-                <button onClick="">ABOUT ME</button>
+                <button class="footer-cell-about-button">ABOUT ME</button>
 
                 <!-- About Overlay (START) -->
                 <div id="overlay-about">
-                    <button onClick=""></button>
+                    <button class="overlay-about-button"></button>
                     <div>
                         <div class="overlay-about-background">
                             <div class="overlay-about-lines overlay-about-lines-left">
@@ -497,5 +510,8 @@
     </div>
     <!-- Footer (END) -->
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="index.js" charset="UTF-8"></script>
 </body>
 </html>

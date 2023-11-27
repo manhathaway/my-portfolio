@@ -9,10 +9,7 @@
         background-color: var(--menu-overlay);
         border-bottom: 5px solid var(--secondary-teal);
 
-        transition-duration: 2s;
-        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-
-        display: none;
+        display: grid;
         justify-content: center;
 
         position: fixed;
