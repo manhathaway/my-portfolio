@@ -52,7 +52,7 @@ function projectsAnimation(project) {
         clickCounter = !clickCounter;
         
         if (clickCounter) {
-            $(project + " .projects-button").text("▼")
+            $(project + " .projects-button").text("▼");
             $(project + " .projects-desc").slideToggle();
             setTimeout(function(){
                 $(project + " .projects-desc .projects-desc-content").fadeToggle();
@@ -61,7 +61,7 @@ function projectsAnimation(project) {
             $(project + " .projects-desc .projects-desc-content").fadeToggle();
             setTimeout(function(){
                 $(project + " .projects-desc").slideToggle();
-                $(project + " .projects-button").text("▲")
+                $(project + " .projects-button").text("▲");
             }, 500);
         }
     });
