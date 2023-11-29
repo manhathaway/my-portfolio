@@ -7,6 +7,7 @@ setTimeout(function() {
 $("#overlay-menu").hide();
 toggleFade("#overlay-menu-icon", "#overlay-menu");
 clickFadeOut("#overlay-menu button", "#overlay-menu");
+clickFadeOut(".overlay-menu-option", "#overlay-menu")
 escapeFadeOut("#overlay-menu");
 
 // Toggle Sliders
