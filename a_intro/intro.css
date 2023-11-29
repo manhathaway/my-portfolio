@@ -79,7 +79,7 @@
     background-color: var(--secondary-teal);
     width: 7.5px;
     height: 7.5px;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     font-size: 2rem;
 }
 
