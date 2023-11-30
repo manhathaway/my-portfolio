@@ -86,25 +86,28 @@
 }
 
 .experience-indicator {
-    width: 7.5px;
-    height: 7.5px;
     display: inline-block;
     margin-right: 5px;
+
+    position: relative;
 }
 
 .experience-indicator:first-of-type {
+    width: 7.5px;
+    height: 7.5px;
     background-color: var(--secondary-magenta);
-    
-    position: relative;
+
     top: -10px;
 }
 
 .experience-indicator:last-of-type {
-    background-color: var(--secondary-teal);
-    border-radius: 5px;
-    
-    position: relative;
-    top: -10px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 7.5px solid var(--secondary-teal);
+
+    top: -7.5px;
 }
 
 .experience-rows {
@@ -246,10 +249,11 @@
 
 .experience-discipline::before {
     content: ' ';
-    width: 5px;
-    height: 5px;
-    border-radius: 2.5px;
-    background-color: var(--secondary-teal);
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 7.5px solid var(--secondary-teal);
     margin-right: 15px;
 }
 

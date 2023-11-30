@@ -6,9 +6,8 @@ setTimeout(function() {
 // Toggle Menu 
 $("#overlay-menu").hide();
 toggleFade("#overlay-menu-icon", "#overlay-menu");
-clickFadeOut("#overlay-menu button", "#overlay-menu");
-clickFadeOut(".overlay-menu-option", "#overlay-menu")
-escapeFadeOut("#overlay-menu");
+fadeOut("#overlay-menu button", "#overlay-menu");
+fadeOut(".overlay-menu-option", "#overlay-menu")
 
 // Toggle Sliders
 $(".projects-desc").hide();
@@ -20,20 +19,17 @@ projectsAnimation(".projects-musix");
 $("#overlay-musix").hide();
 toggleFade(".musix-desc-link", "#overlay-musix");
 toggleFade(".musix-desc-link-sm", "#overlay-musix");
-clickFadeOut("#overlay-musix button", "#overlay-musix");
-escapeFadeOut("#overlay-musix");
+fadeOut("#overlay-musix button", "#overlay-musix");
 
 // Toggle Resume
 $("#overlay-resume").hide();
 toggleFade(".footer-cell-resume-button", "#overlay-resume");
-clickFadeOut(".overlay-resume-button", "#overlay-resume");
-escapeFadeOut("#overlay-resume");
+fadeOut(".overlay-resume-button", "#overlay-resume");
 
 // Toggle About Me
 $("#overlay-about").hide();
 toggleFade(".footer-cell-about-button", "#overlay-about");
-clickFadeOut(".overlay-about-button", "#overlay-about");
-escapeFadeOut("#overlay-about");
+fadeOut(".overlay-about-button", "#overlay-about");
 
 
 // Functions
@@ -43,13 +39,10 @@ function toggleFade(button, overlay) {
     });
 }
 
-function clickFadeOut(button, overlay) {
+function fadeOut(button, overlay) {
     $(button).click(function() {
         $(overlay).fadeOut();
     });
-}
-
-function escapeFadeOut(overlay) {
     $(document).on('keydown', function(event) {
         if (event.key == 'Escape') {
             $(overlay).fadeOut();
