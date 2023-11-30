@@ -66,17 +66,21 @@ function projectsAnimation(project) {
         clickCounter = !clickCounter;
         
         if (clickCounter) {
+            $(project + " .projects-button").css("position", "fixed");
             $(project + " .projects-button").text("▼");
             $(project + " .projects-desc").slideToggle();
             setTimeout(function(){
                 $(project + " .projects-desc .projects-desc-content").fadeToggle();
             }, 500);
+            $(project + " .projects-button").css("position", "unset");
         } else {
+            $(project + " .projects-button").css("position", "fixed");
             $(project + " .projects-desc .projects-desc-content").fadeToggle();
             setTimeout(function(){
                 $(project + " .projects-desc").slideToggle();
                 $(project + " .projects-button").text("▲");
             }, 500);
+            $(project + " .projects-button").css("position", "unset");
         }
     });
 }
