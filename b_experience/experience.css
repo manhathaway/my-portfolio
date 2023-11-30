@@ -4,7 +4,7 @@
 
 #experience-grid {
     width: 100%;
-    max-width: 2150px;
+    max-width: 2050px;
     margin: 0 auto;
 
     display: grid;
@@ -13,7 +13,7 @@
 
 .experience-cell {
     color: var(--secondary-white);
-    max-width: 1025px;
+    max-width: 975px;
 
     display: grid;
     grid-template-rows: 100px 1fr fit-content(100%);
