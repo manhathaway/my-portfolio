@@ -36,16 +36,25 @@ fadeOut(".overlay-about-button", "#overlay-about");
 function toggleFade(button, overlay) {
     $(button).click(function() {
         $(overlay).fadeToggle();
+        setTimeout(function(){
+            $(overlay).css("transitionDuration", "2s");
+            $(overlay).css("transitionTimingFunction", "cubic-bezier(0.075, 0.82, 0.165, 1)");
+        }, 350);
     });
+
 }
 
 function fadeOut(button, overlay) {
     $(button).click(function() {
         $(overlay).fadeOut();
+        $(overlay).css("transitionDuration", "unset");
+        $(overlay).css("transitionTimingFunction", "unset");
     });
     $(document).on('keydown', function(event) {
         if (event.key == 'Escape') {
             $(overlay).fadeOut();
+            $(overlay).css("transitionDuration", "unset");
+            $(overlay).css("transitionTimingFunction", "unset");
         }
     });
 }
