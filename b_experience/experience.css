@@ -1,5 +1,5 @@
 #experience-bg {
-    background-image: linear-gradient(90deg, var(--primary-dark-purple) 0% 50%, var(--primary-light-purple) 50% 100%);
+    background-image: linear-gradient(90deg, var(--bg-dark) 0% 50%, var(--bg-light) 50% 100%);
 }
 
 #experience-grid {
@@ -12,7 +12,7 @@
 }
 
 .experience-cell {
-    color: var(--secondary-white);
+    color: white;
     max-width: 975px;
 
     display: grid;
@@ -45,7 +45,7 @@
 }
 
 .title-arrow {
-    color: var(--secondary-teal);
+    color: var(--accent);
 }
 
 .experience-programmer > .experience-title > .title-arrow {
@@ -66,14 +66,14 @@
 .experience-programmer > .experience-title,
 .experience-programmer > .experience-body,
 .experience-programmer > .experience-insight {
-    background-color: var(--primary-light-purple);
+    background-color: var(--bg-light);
 }
 
 
 .experience-designer > .experience-title,
 .experience-designer > .experience-body,
 .experience-designer > .experience-insight {
-    background-color: var(--primary-dark-purple);
+    background-color: var(--bg-dark);
 }
 
 .experience-subtitle {
@@ -81,7 +81,7 @@
     letter-spacing: 0.5px;
     font-weight: bold;
     padding-bottom: 5px;
-    border-bottom: 3px solid var(--secondary-teal);
+    border-bottom: 3px solid var(--accent);
     margin-bottom: 25px;
 }
 
@@ -90,24 +90,6 @@
     margin-right: 5px;
 
     position: relative;
-}
-
-.experience-indicator:first-of-type {
-    width: 7.5px;
-    height: 7.5px;
-    background-color: var(--secondary-magenta);
-
-    top: -10px;
-}
-
-.experience-indicator:last-of-type {
-    width: 0;
-    height: 0;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    border-left: 7.5px solid var(--secondary-teal);
-
-    top: -7.5px;
 }
 
 .experience-rows {
@@ -134,14 +116,14 @@
 }
 
 .experience-row-icon {
-    padding: 5px;
-    border: 3px solid var(--secondary-magenta);
+    padding: 7.5px;
+    background-color: var(--accent-trans);
 }
 
 .experience-row-label {
     font-size: 1.2rem;
     letter-spacing: 0.25px;
-    color: var(--secondary-white);
+    color: white;
 }
 
 .experience-row-rating {
@@ -163,13 +145,14 @@
     text-align: right;
     font-size: 0.9rem;
     font-weight: normal;
-    color: var(--secondary-white);
+    color: white;
 }
 
 .experience-row-bar-divide {
-    background-color: var(--secondary-white);
+    background-color: white;
 }
 
+/*
 #figma > .experience-row-rating > .experience-row-bar {
     grid-template-columns: 75% 5px 1fr;
 }
@@ -229,6 +212,7 @@
 #react > .experience-row-rating > .experience-row-bar > .experience-row-bar-incomplete {
     background-image: linear-gradient(90deg, rgba(90, 158, 227, 0.5), var(--secondary-magenta-trans));
 }
+*/
 
 .experience-disciplines {
     margin-top: 25px;
@@ -253,20 +237,20 @@
     height: 0;
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
-    border-left: 7.5px solid var(--secondary-teal);
+    border-left: 7.5px solid var(--accent-trans);
     margin-right: 15px;
 }
 
 .experience-discipline-label {
     margin-left: 10px;
     font-size: 1.2rem;
-    color: var(--secondary-white);
+    color: white;
 }
 
 .experience-insight-paragraph {
     font-size: 1.25rem;
     letter-spacing: 0.15px;
-    color: var(--secondary-white);
+    color: white;
     text-align: justify;
 }
 
@@ -301,7 +285,7 @@
     .experience-designer > .experience-title,
     .experience-designer > .experience-body,
     .experience-designer > .experience-insight {
-        background-image: linear-gradient(90deg, var(--primary-light-purple) 0% 50%, var(--primary-dark-purple) 50% 100%);
+        background-image: linear-gradient(90deg, var(--bg-light) 0% 50%, var(--bg-dark) 50% 100%);
     }
 
     .experience-cell {
@@ -309,7 +293,7 @@
     }
 }
 
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 1100px) {
     .experience-cell {
     transition-duration: 2s;
     transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);

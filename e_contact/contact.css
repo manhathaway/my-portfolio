@@ -1,5 +1,5 @@
 #contact-bg {
-    background-color: var(--projects-background);
+    background-color: var(--bg-projects);
     padding: 0 50px;
 }
 
@@ -9,7 +9,7 @@
 }
 
 .contact-title {
-    color: var(--secondary-white);
+    color: white;
     font-size: 3.85rem;
     letter-spacing: 2px;
     font-weight: bold;
@@ -41,7 +41,7 @@
 }
 
 .contact-form-option > label {
-    color: var(--contact-input-labels);
+    color: white;
     text-align: right;
     font-size: 1.15rem;
     font-weight: bold;
@@ -60,11 +60,14 @@
 .contact-form-option > input,
 .contact-form-option > textarea {
     font-family: 'Nunito', sans-serif;
-    color: var(--secondary-white);
+    color: white;
     padding-left: 10px;
-    background-color: var(--contact-input-background);
+    background-color: rgba(255, 255, 255, 0.25);
     font-size: 1rem;
     border: none;
+
+    transition-duration: 2s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .contact-form-option > input:focus,
@@ -73,7 +76,7 @@
 }
 
 .contact-form-option > input::placeholder {
-    color: var(--contact-input-labels);
+    color: white;
     opacity: 50%;
 }
 
@@ -82,8 +85,8 @@
     background-color: unset;
     font-size: 1.15rem;
     letter-spacing: 1px;
-    color: var(--secondary-teal);
-    border: 3px solid var(--secondary-teal);
+    color: white;
+    border: 3px solid white;
     cursor: pointer;
 
     transition-duration: 2s;
@@ -96,22 +99,23 @@
     max-width: 2065px;
 }
 
-@media screen and (min-width: 950px) {
-    .contact-form-option > input:hover,
-    .contact-form-option > textarea:hover {
-        background-color: var(--contact-input-background-active);
-    }
-    
-    .contact-form-submit:hover {
-        color: var(--secondary-magenta);
-        border: 3px solid var(--secondary-magenta);
-    }
+.contact-form-submit:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.contact-form-option > input:hover,
+.contact-form-option > textarea:hover {
+    background-color: rgba(255, 255, 255, 0.35);
 }
 
 @media screen and (max-width: 950px) {   
     .contact-title {
         padding: 50px 0;
         font-size: 6.5vw;
+    }
+
+    .contact-form-submit {
+        font-size: 1rem;
     }
 }
 

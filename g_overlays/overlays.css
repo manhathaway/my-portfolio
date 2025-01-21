@@ -6,8 +6,7 @@
         padding: 50px;
         height: 85svh;
         width: 85%;
-        background-color: var(--menu-overlay);
-        border-bottom: 5px solid var(--secondary-teal);
+        background-color: var(--bg-projects-trans);
 
         display: grid;
         justify-content: center;
@@ -38,7 +37,7 @@
     #overlay-resume > button,
     #overlay-about > button {
         background-color: unset;
-        border: 3px solid var(--secondary-teal);
+        border: 3px solid white;
         cursor: pointer;
 
         background-image: url(./resources/cross.svg);
@@ -68,9 +67,8 @@
     .overlay-musix-presentation-bg,
     .overlay-resume-download-bg {
         text-decoration: unset;
-        color: var(--secondary-white);
-        border-bottom: 3px solid var(--secondary-teal);
-        border-right: 3px solid var(--secondary-teal);
+        color: white;
+        border: 3px solid white;
         font-size: 1.25rem;
         letter-spacing: 0.5px;
 
@@ -105,7 +103,8 @@
 
 /* Menu Overlay */
     #overlay-menu-icon {
-        background-image: url(./resources/menu_icon_inactive.svg);
+        background-image: url(./resources/menu_icon.svg);
+        opacity: 50%;
         width: 40px;
         height: 40px;
         border: none;
@@ -161,9 +160,8 @@
         border: unset;
         text-decoration: unset;
         text-align: center;
-        border-bottom: 5px solid var(--secondary-teal);
-        border-right: 5px solid var(--secondary-teal);
-        color: var(--secondary-white);
+        border: 3px solid white;
+        color: white;
         padding: 15px 0;
         font-size: 1.5rem;
         letter-spacing: 1px;
@@ -175,10 +173,10 @@
 
 /* Musix Overlay */
     #overlay-musix {
-    grid-template-columns: 200px 200px 1fr 50px;
-    grid-template-areas:
-    " pres      down       .         exit    "
-    " content   content    content   content ";
+        grid-template-columns: 200px 200px 1fr 50px;
+        grid-template-areas:
+        " pres      down       .         exit    "
+        " content   content    content   content ";
     }
     
     .overlay-musix-presentation-sm,
@@ -227,7 +225,7 @@
     }
 
     .overlay-about-background {
-        background-color: var(--contact-input-background);
+        background-color: var(--bg-projects-trans);
         width: 100%;
         height: calc(100% - 50px);
 
@@ -279,7 +277,7 @@
     }
     
     .overlay-about-line {
-        background-color: var(--menu-overlay);
+        background-color: white;
         width: 100%;
         height: 6px;
     }
@@ -287,7 +285,7 @@
     .overlay-about-paragraph {
         width: 85%;
         height: 100%;
-        color: var(--secondary-white);
+        color: white;
         font-size: 1.25rem;
         text-align: justify;
 
@@ -419,20 +417,12 @@
     }
 
 /* Hover Animations */
-@media screen and (min-width: 950px) {
-    /* Window */
-    #overlay-menu:hover,
-    #overlay-musix:hover,
-    #overlay-resume:hover,
-    #overlay-about:hover {
-        border-bottom: 5px solid var(--secondary-magenta);
-    }
-
     /* Option Button */
-    #overlay-musix > a:hover,
-    #overlay-resume > a:hover {
-    border-bottom: 3px solid var(--secondary-magenta);
-    border-right: 3px solid var(--secondary-magenta);
+    @media screen and (min-width: 700px) {
+        #overlay-musix > a:hover,
+        #overlay-resume > a:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
     }
 
     /* Exit Button */
@@ -440,21 +430,18 @@
     #overlay-musix > button:hover,
     #overlay-resume > button:hover,
     #overlay-about > button:hover {
-        background-image: url(./resources/cross_active.svg);
-        border: 3px solid var(--secondary-magenta);
+        background-color: rgba(255, 255, 255, 0.15);
     }
 
     /* Menu - Icon */
     #overlay-menu-icon:hover {
-        background-image: url(./resources/menu_icon_active.svg);
+        opacity: 100%;
     }
 
     /* Menu - Options */
     .overlay-menu-option:hover {
-        border-bottom: 5px solid var(--secondary-magenta);
-        border-right: 5px solid var(--secondary-magenta);
+        background-color: rgba(255, 255, 255, 0.15);
     }
-}
 
 /*
 

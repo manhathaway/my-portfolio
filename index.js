@@ -14,6 +14,7 @@ $(".projects-desc").hide();
 $(".projects-desc-content").hide();
 projectsAnimation(".projects-sffpc");
 projectsAnimation(".projects-musix");
+projectsAnimation(".projects-tsy");
 
 // Toggle Musix
 $("#overlay-musix").hide();
