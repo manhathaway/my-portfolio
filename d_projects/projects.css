@@ -56,6 +56,10 @@
     background-image: url(./resources/tsy_thumbnail.png);
 }
 
+.projects-ky {
+    background-image: url(./resources//ky_thumbnail.png);
+}
+
 .projects-button {
     width: 15%;
     height: 15%;
@@ -137,22 +141,21 @@
     padding: 10px;
 }
 
-.projects-status-icon-sm-sffpc {
+.projects-status-icon-sm-incomp {
     background-color: var(--projects-status-incomplete-bg);
 }
 
-.projects-status-icon-sm-musix,
-.projects-status-icon-sm-tsy {
+.projects-status-icon-sm-comp
+ {
     background-color: var(--projects-status-complete-bg);
 }
 
-.projects-status-icon-sffpc {
+.projects-status-icon-incomp {
     color: var(--projects-status-incomplete);
     border: 3px solid var(--projects-status-incomplete);
 }
 
-.projects-status-icon-musix,
-.projects-status-icon-tsy {
+.projects-status-icon-comp {
     color: var(--projects-status-complete);
     border: 3px solid var(--projects-status-complete);
 }
@@ -239,7 +242,19 @@
     background: rgba(255, 255, 255, 0.15);
 }
 
-@media screen and (min-width: 2000px) {
+@media screen and (min-width: 2750px) {
+    #projects-grid {
+        grid-template-rows: unset;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .projects-thumbnail {
+        width: calc(25svw - 36.25px);
+        height: calc(25svw - 36.25px);
+    }
+}
+
+@media screen and (min-width: 2000px) and (max-width: 2749px) {
     #projects-grid {
         grid-template-rows: unset;
         grid-template-columns: repeat(3, 1fr);
@@ -273,10 +288,6 @@
 @media screen and (max-width: 700px) {
     #projects-body {
         grid-template-rows: 100px 1fr;
-    }
-
-    #projects-grid {
-        gap: 15px;
     }
 }
 
@@ -321,9 +332,9 @@
     }
 }
 
-@media screen and (max-width: 1000px),
-(min-width: 1250px) and (max-width: 1900px),
-(min-width: 2000px) and (max-width: 2800px) {
+/* Medium Formatting */
+@media screen and (max-width: 1000px)
+, (min-width: 1250px) and (max-width: 3750px) {
     .projects-button {
         width: 10%;
         height: 10%;
@@ -348,9 +359,11 @@
     }
 }
 
-@media screen and (max-width: 775px),
-(min-width: 1200px) and (max-width: 1525px),
-(min-width: 2000px) and (max-width: 2400px) {
+/* Small Formatting */
+@media screen and (max-width: 775px)
+, (min-width: 1250px) and (max-width: 1525px)
+, (min-width: 2000px) and (max-width: 2400px)
+, (min-width: 2750px) and (max-width: 3050px) {
     .projects-desc-title > h2 {
         font-size: 1.5rem;
         letter-spacing: 1px;
@@ -375,7 +388,6 @@
 }
 
 @media screen and (max-width: 650px) {
-
     .projects-status-icon,
     .projects-desc-link {
         display: none;
