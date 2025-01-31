@@ -1,10 +1,11 @@
 :root {
-    --accent: rgb(0, 255, 209);
-    --accent-trans: rgb(14, 39, 45);
+    --accent: rgb(105, 105, 125);
+    --accent-trans-half: rgba(105, 105, 125, 0.25);
+    --accent-trans-full: rgba(105, 105, 125, 0.5);
     --bg-light: rgb(15, 15, 27);
     --bg-dark: rgb(10, 10, 17);
     --bg-projects: rgb(0, 0, 5);
-    --bg-projects-trans: rgba(0, 0, 5, 0.5);
+    --bg-projects-trans: rgba(0, 0, 5, 0.6);
     --projects-status-incomplete: rgb(0, 150, 255);
     --projects-status-incomplete-bg: rgba(0, 150, 255, 0.25);
     --projects-status-complete: rgb(0, 255, 150);

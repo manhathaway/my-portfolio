@@ -22,7 +22,7 @@
     padding: 25px;
     width: 100%;
     border: unset;
-    border: 3px solid white;
+    border: 3px solid var(--accent-trans-full);
     background: transparent;
     color: white;
     cursor: pointer;
@@ -34,7 +34,7 @@
 }
 
 .footer-cell > button:hover {
-    background: rgba(255, 255, 255, 0.25);
+    border: 3px solid white;
 }
 
 @media screen and (max-width: 950px) {

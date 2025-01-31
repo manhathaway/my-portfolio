@@ -62,7 +62,7 @@
     font-family: 'Nunito', sans-serif;
     color: white;
     padding-left: 10px;
-    background-color: rgba(255, 255, 255, 0.25);
+    background-color: var(--accent-trans-half);
     font-size: 1rem;
     border: none;
 
@@ -86,7 +86,7 @@
     font-size: 1.15rem;
     letter-spacing: 1px;
     color: white;
-    border: 3px solid white;
+    border: 3px solid var(--accent-trans-full);
     cursor: pointer;
 
     transition-duration: 2s;
@@ -100,12 +100,12 @@
 }
 
 .contact-form-submit:hover {
-    background: rgba(255, 255, 255, 0.25);
+    border: 3px solid white;
 }
 
 .contact-form-option > input:hover,
 .contact-form-option > textarea:hover {
-    background-color: rgba(255, 255, 255, 0.35);
+    background-color: var(--accent-trans-full);
 }
 
 @media screen and (max-width: 950px) {   

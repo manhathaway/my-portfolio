@@ -117,7 +117,7 @@
 
 .experience-row-icon {
     padding: 7.5px;
-    background-color: var(--accent-trans);
+    border: 3px solid var(--accent);
 }
 
 .experience-row-label {
@@ -237,7 +237,7 @@
     height: 0;
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
-    border-left: 7.5px solid var(--accent-trans);
+    border-left: 7.5px solid white;
     margin-right: 15px;
 }
 
