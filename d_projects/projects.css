@@ -229,12 +229,11 @@
     cursor: pointer;
 }
 
-.sffpc-desc-link-sm,
-.tsy-desc-link-sm {
+.desc-link-open-sm {
     background-image: url(./resources/open.svg);
 }
 
-.musix-desc-link-sm {
+.desc-link-exp-sm {
     background-image: url(./resources/expand.svg);
 }
 
