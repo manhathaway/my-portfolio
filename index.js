@@ -63,26 +63,38 @@ function fadeOut(button, overlay) {
 
 function projectsAnimation(project) {
     let clickCounter = false;
-
-    $(project + " .projects-button").click(function() {
-        clickCounter = !clickCounter;
-        
-        if (clickCounter) {
-            $(project + " .projects-button").css("position", "fixed");
-            $(project + " .projects-button").text("▼");
-            $(project + " .projects-desc").slideToggle();
-            setTimeout(function(){
-                $(project + " .projects-desc .projects-desc-content").fadeToggle();
-            }, 500);
-            $(project + " .projects-button").css("position", "unset");
-        } else {
-            $(project + " .projects-button").css("position", "fixed");
-            $(project + " .projects-desc .projects-desc-content").fadeToggle();
-            setTimeout(function(){
-                $(project + " .projects-desc").slideToggle();
-                $(project + " .projects-button").text("▲");
-            }, 500);
-            $(project + " .projects-button").css("position", "unset");
+  
+    $(`${project}, ${project} .projects-button`).click(function(event) {
+        if ($(event.target).hasClass("projects-button")) {
+            event.stopPropagation();
         }
+  
+        clickCounter = !clickCounter;
+  
+        if (clickCounter) {
+            $(`${project} .projects-button`).css("position", "fixed");
+            $(`${project} .projects-button`).text("▼");
+            $(`${project} .projects-desc`).slideToggle();
+
+            setTimeout(function() {
+                $(`${project} .projects-desc .projects-desc-content`).fadeToggle();
+            }, 500);
+
+            $(`${project} .projects-button`).css("position", "unset");
+        } else {
+            $(`${project} .projects-button`).css("position", "fixed");
+            $(`${project} .projects-desc .projects-desc-content`).fadeToggle();
+
+            setTimeout(function() {
+                $(`${project} .projects-desc`).slideToggle();
+                $(`${project} .projects-button`).text("▲");
+            }, 500);
+
+            $(`${project} .projects-button`).css("position", "unset");
+        }
+    });
+  
+    $(`${project} .projects-desc`).click(function(event) {
+        event.stopPropagation();
     });
 }
