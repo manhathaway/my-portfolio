@@ -10,6 +10,10 @@
     --projects-status-incomplete-bg: rgba(0, 150, 255, 0.25);
     --projects-status-complete: rgb(0, 255, 150);
     --projects-status-complete-bg: rgba(0, 255, 150, 0.25);
+
+    --art-blue: #19192A;
+    --art-gray: #69697D;
+    --art-white: #FFFFFF;
 }
 
 * {
