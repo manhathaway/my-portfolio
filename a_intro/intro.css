@@ -199,43 +199,43 @@
 }
 
 @keyframes primaryFill {
-    0%          { fill: var(--art-blue); }
-    16.66%      { fill: var(--art-gray); }
+    0%          { fill: var(--art-primary); }
+    16.66%      { fill: var(--art-secondary); }
     33.33%      { fill: var(--art-white); }
-    50%         { fill: var(--art-blue); }
-    66.66%      { fill: var(--art-gray); }
+    50%         { fill: var(--art-primary); }
+    66.66%      { fill: var(--art-secondary); }
     83.33%      { fill: var(--art-white); }
-    100%        { fill: var(--art-blue); }
+    100%        { fill: var(--art-primary); }
 }
   
 @keyframes secondaryFill {
     0%          { fill: var(--art-white); }
-    16.66%      { fill: var(--art-blue); }
-    33.33%      { fill: var(--art-gray); }
+    16.66%      { fill: var(--art-primary); }
+    33.33%      { fill: var(--art-secondary); }
     50%         { fill: var(--art-white); }
-    66.66%      { fill: var(--art-blue); }
-    83.33%      { fill: var(--art-gray); }
+    66.66%      { fill: var(--art-primary); }
+    83.33%      { fill: var(--art-secondary); }
     100%        { fill: var(--art-white); }
 }
   
 @keyframes tertiaryFill {
-    0%          { fill: var(--art-gray); }
+    0%          { fill: var(--art-secondary); }
     16.66%      { fill: var(--art-white); }
-    33.33%      { fill: var(--art-blue); }
-    50%         { fill: var(--art-gray); }
+    33.33%      { fill: var(--art-primary); }
+    50%         { fill: var(--art-secondary); }
     66.66%      { fill: var(--art-white); }
-    83.33%      { fill: var(--art-blue); }
-    100%        { fill: var(--art-gray); }
+    83.33%      { fill: var(--art-primary); }
+    100%        { fill: var(--art-secondary); }
 }
 
 @keyframes tertiaryStroke {
-    0%          { stroke: var(--art-gray); }
+    0%          { stroke: var(--art-secondary); }
     16.66%      { stroke: var(--art-white); }
-    33.33%      { stroke: var(--art-blue); }
-    50%         { stroke: var(--art-gray); }
+    33.33%      { stroke: var(--art-primary); }
+    50%         { stroke: var(--art-secondary); }
     66.66%      { stroke: var(--art-white); }
-    83.33%      { stroke: var(--art-blue); }
-    100%        { stroke: var(--art-gray); }
+    83.33%      { stroke: var(--art-primary); }
+    100%        { stroke: var(--art-secondary); }
 }
 
 @media screen and (max-width: 1915px) {
