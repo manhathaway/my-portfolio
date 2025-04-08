@@ -2,6 +2,9 @@
     --accent: rgb(105, 105, 125);
     --accent-trans-half: rgba(105, 105, 125, 0.25);
     --accent-trans-full: rgba(105, 105, 125, 0.5);
+    --art-blue: rgb(25, 25, 42);
+    --art-gray: rgb(100, 100, 125);
+    --art-white: rgb(255, 255, 255);
     --bg-light: rgb(15, 15, 27);
     --bg-dark: rgb(10, 10, 17);
     --bg-projects: rgb(0, 0, 5);
@@ -10,10 +13,6 @@
     --projects-status-incomplete-bg: rgba(0, 150, 255, 0.25);
     --projects-status-complete: rgb(0, 255, 150);
     --projects-status-complete-bg: rgba(0, 255, 150, 0.25);
-
-    --art-blue: #19192A;
-    --art-gray: #69697D;
-    --art-white: #FFFFFF;
 }
 
 * {

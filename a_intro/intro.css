@@ -173,20 +173,29 @@
 }
 
 /* Art Animations */
+.primary-fill,
+.secondary-fill,
+.tertiary-fill,
+.tertiary-stroke {
+    animation-duration: 18s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-iteration-count: infinite;
+}
+
 .primary-fill {
-    animation: primaryFill 24s linear infinite;
+    animation-name: primaryFill;
 }
 
 .secondary-fill {
-    animation: secondaryFill 24s linear infinite;
+    animation-name: secondaryFill;
 }
 
-.teritary-fill {
-    animation: teritaryFill 24s linear infinite;
+.tertiary-fill {
+    animation-name: tertiaryFill;
 }
 
-.teritary-stroke {
-    animation: teritaryStroke 24s linear infinite;
+.tertiary-stroke {
+    animation-name: tertiaryStroke;
 }
 
 @keyframes primaryFill {
@@ -209,7 +218,7 @@
     100%        { fill: var(--art-white); }
 }
   
-@keyframes teritaryFill {
+@keyframes tertiaryFill {
     0%          { fill: var(--art-gray); }
     16.66%      { fill: var(--art-white); }
     33.33%      { fill: var(--art-blue); }
@@ -219,7 +228,7 @@
     100%        { fill: var(--art-gray); }
 }
 
-@keyframes teritaryStroke {
+@keyframes tertiaryStroke {
     0%          { stroke: var(--art-gray); }
     16.66%      { stroke: var(--art-white); }
     33.33%      { stroke: var(--art-blue); }

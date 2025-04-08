@@ -45,7 +45,17 @@
 }
 
 .title-arrow {
-    color: var(--accent);
+    animation-name: arrowFill;
+    animation-duration: 24s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes arrowFill {
+    0%      { color: var(--art-blue); }
+    33.33%  { color: var(--art-white); }
+    66.66%  { color: var(--art-gray); }
+    100%    { color: var(--art-blue); }
 }
 
 .experience-programmer > .experience-title > .title-arrow {
