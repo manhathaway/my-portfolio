@@ -1,9 +1,9 @@
 :root {
-    --accent: rgb(105, 105, 135);
+    --accent: rgb(105, 105, 130);
     --accent-trans-half: rgba(105, 105, 135, 0.25);
     --accent-trans-full: rgba(105, 105, 135, 0.5);
-    --art-primary: rgba(105, 105, 135, 0.05);
-    --art-secondary: rgba(105, 105, 135, 0.10);
+    --art-primary: rgba(105, 105, 135, 0.15);
+    --art-secondary: rgba(105, 105, 135, 0.3);
     --art-white: rgb(255, 255, 255);
     --bg-light: rgb(15, 15, 27);
     --bg-dark: rgb(10, 10, 17);
