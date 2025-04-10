@@ -1,7 +1,10 @@
-// Loading Screen
-setTimeout(function() {
-    $("#loading-screen").fadeOut(500);
-}, 1000);
+// Unhide Overlays
+$(document).ready(function() {
+    $("#overlay-menu").css("visibility", "visible");
+    $("#overlay-musix").css("visibility", "visible");
+    $("#overlay-resume").css("visibility", "visible");
+    $("#overlay-about").css("visibility", "visible");
+}, 0);
 
 // Toggle Menu 
 $("#overlay-menu").hide();
