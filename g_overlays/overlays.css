@@ -21,7 +21,7 @@
     #overlay-musix,
     #overlay-resume {
         max-width: 1500px;
-        gap: 25px;
+        gap: 25px 7.5px;
         grid-template-rows: 50px 1fr;
 
         z-index: 4;
@@ -87,7 +87,9 @@
         width: 100%;
         height: 100%;
         background-repeat: no-repeat;
+        background-size: cover;
         display: none;
+        border: 3px solid white;
     }
 
     .overlay-musix-download-sm,
@@ -357,17 +359,16 @@
         #overlay-musix {
             grid-template-columns: 50px 50px 1fr 50px;
             padding: 25px;
-            gap: 25px 10px;
         }
 
         .overlay-musix-download-bg,
         .overlay-musix-presentation-bg {
-            display: none
+            display: none;
         }
 
         .overlay-musix-download-sm,
         .overlay-musix-presentation-sm {
-            display: unset
+            display: unset;
         }
     }
 
@@ -379,7 +380,7 @@
         }
 
         .overlay-resume-download-bg {
-            display: none
+            display: none;
         }
 
         .overlay-resume-download-sm {
@@ -418,30 +419,31 @@
     }
 
 /* Hover Animations */
-    /* Option Button */
     @media screen and (min-width: 700px) {
+        /* Option Button */
         #overlay-musix > a:hover,
         #overlay-resume > a:hover {
             background: rgba(255, 255, 255, 0.15);
         }
-    }
 
-    /* Exit Button */
-    #overlay-menu > button:hover,
-    #overlay-musix > button:hover,
-    #overlay-resume > button:hover,
-    #overlay-about > button:hover {
-        background-color: rgba(255, 255, 255, 0.15);
-    }
+        /* Exit Button */
+        #overlay-menu > button:hover,
+        #overlay-musix > button:hover,
+        #overlay-resume > button:hover,
+        #overlay-about > button:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+        }
 
-    /* Menu - Icon */
-    #overlay-menu-icon:hover {
-        opacity: 100%;
-    }
+        /* Menu - Icon */
+        #overlay-menu-icon:hover {
+            opacity: 100%;
+        }
 
-    /* Menu - Options */
-    .overlay-menu-option:hover {
-        background-color: rgba(255, 255, 255, 0.15);
+        /* Menu - Options */
+        .overlay-menu-option:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+
     }
 
 /*
