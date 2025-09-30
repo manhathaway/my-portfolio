@@ -221,6 +221,11 @@
     transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+.projects-desc-link-disabled {
+    color: rgb(255, 175, 175);
+    border-color: rgb(255, 175, 175);
+}
+
 .projects-desc-link-sm {
     display: none;
     width: 50px;
@@ -231,8 +236,16 @@
     cursor: pointer;
 }
 
+.projects-desc-link-sm-disabled {
+    border-color: rgb(255, 150, 150);
+}
+
 .desc-link-open-sm {
     background-image: url(./resources/open.svg);
+}
+
+.desc-link-open-sm-disabled {
+    background-image: url(./resources/open_disabled.svg);
 }
 
 .desc-link-exp-sm {
@@ -241,6 +254,10 @@
 
 .projects-desc-link:hover {
     background: rgba(255, 255, 255, 0.15);
+}
+
+.projects-desc-link-disabled:hover {
+    background: rgba(255, 175, 175, 0.15);
 }
 
 @media screen and (min-width: 2750px) {
