@@ -232,7 +232,7 @@
     height: 50px;
     background-size: cover;
     background-color: unset;
-    border: 3px solid var(--projects-button-sm);
+    border: unset;
     cursor: pointer;
 }
 
@@ -405,7 +405,7 @@
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 650px) {
     .projects-status-icon,
     .projects-desc-link {
         display: none;

@@ -8,16 +8,11 @@
     --bg-light: rgb(15, 15, 27);
     --bg-dark: rgb(10, 10, 17);
     --bg-projects: rgb(0, 0, 5);
-    --bg-projects-trans: rgba(0, 0, 5, 0.75);
-    --projects-button-sm: rgb(0, 255, 150);
-    --projects-button-sm-trans: rgba(0, 255, 150, 0.25);
-    
-    /*
-        --projects-status-incomplete: rgb(0, 150, 255);
-        --projects-status-incomplete-bg: rgba(0, 150, 255, 0.25);
-        --projects-status-complete: rgb(0, 255, 150);
-        --projects-status-complete-bg: rgba(0, 255, 150, 0.25);
-    */
+    --bg-projects-trans: rgba(0, 0, 5, 0.6);
+    --projects-status-incomplete: rgb(0, 150, 255);
+    --projects-status-incomplete-bg: rgba(0, 150, 255, 0.25);
+    --projects-status-complete: rgb(0, 255, 150);
+    --projects-status-complete-bg: rgba(0, 255, 150, 0.25);
 }
 
 * {
